@@ -15,9 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '"*.js',
-      '"*.js"',
-      '*.js'
+      'src/galactic-age.js',
+      'src/main.js',
+      'src/styles.css',
+      'spec/galactic-age-spec.js'
     ],
 
 
