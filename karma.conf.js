@@ -18,7 +18,7 @@ module.exports = function(config) {
       'src/galactic-age.js',
       'src/main.js',
       'src/styles.css',
-      'spec/galactic-age-spec.js'
+      'spec/galactic-age-spec.js',
     ],
 
 
@@ -36,7 +36,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'karma-jasmine-html-reporter'],
 
 
     // web server port
