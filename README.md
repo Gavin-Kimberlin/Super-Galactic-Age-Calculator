@@ -6,11 +6,11 @@
 
 ## Description
 
-This is a website that takes the user's age and expected age and returnd in normal years, Mercury years, Venus years, Mars years, and Jupiter years.
+This is a website that takes the user's age and expected age and returns their age and expected age in normal years, Mercury years, Venus years, Mars years, and Jupiter years.
 
 ## Setup/Installation Requirements
 
-* Paste this link into your browser of choice:
+* Paste this link into your browser of choice: https://gavin-kimberlin.github.io/Super-Galactic-Age-Calculator/
 * Input your age and expected age
 * Hit Submit
 
