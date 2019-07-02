@@ -34,7 +34,7 @@
     "webpack-dev-server": "^3.1.0"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "test": "jasmine",
     "build": "webpack --mode development",
     "start": "npm run build && webpack-dev-server --open --mode development"
   },
