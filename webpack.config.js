@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -11,35 +11,41 @@ module.exports = {
   },
   devtool: 'eval-source-map',
   devServer: {
-  contentBase: './dist'
+    contentBase: './dist'
   },
   plugins: [
-    new UglifyJsPlugin({ sourceMap: true }),
-    new UglifyJsPlugin(),
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      title: 'Template',
-      template: './src/index.html',
-      inject: 'body'
-    })
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      }
-      {
-        test: /\.js$/,
-        exclude: [
-          /node_modules/,
-          /spec/
-        ],
-        loader: "eslint-loader"
-      }
-    ]
-  }
+  new UglifyJsPlugin({ sourceMap: true }),
+   new CleanWebpackPlugin(['dist']),
+   new HtmlWebpackPlugin({
+     title: 'template',
+     template: './src/index.html',
+     inject: 'body'
+   })
+ ],
+ module: {
+   rules: [
+     {
+       test: /\.css$/,
+       use: [
+         'style-loader',
+         'css-loader'
+       ]
+     },
+     {
+       test: /\.js$/,
+       exclude: /node_modules/
+     },
+     {
+       test: /\.js$/,
+       exclude: [
+         /node_modules/,
+         /spec/
+       ],
+       loader: "babel-loader",
+       options: {
+         presets: ['es2015']
+       }
+     }
+   ]
+ }
 };

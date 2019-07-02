@@ -1,26 +1,17 @@
-export function Age(howOld, expextedAge) {
-  this.howOld = howOld;
-  this.expectedAge = expectedAge;
-};
-
-export function Mercury(howOld, expextedAge) {
-  this.howOld = howOld;
-  this.expectedAge = expectedAge;
-};
-
-export function Venus(howOld, expextedAge) {
-  this.howOld = howOld;
-  this.expectedAge = expectedAge;
-};
-
-export function Mars(howOld, expextedAge) {
-  this.howOld = howOld;
-  this.expectedAge = expectedAge;
-};
-
-export function Jupiter(howOld, expextedAge) {
-  this.howOld = howOld;
-  this.expectedAge = expectedAge;
+export default class Planets {
+  constructor(age, expectedAge) {
+    this.earth = [age, expextedAge];
+    this.mercury = [age, expextedAge];
+    this.venus = [age, expextedAge];
+    this.mars = [age, expextedAge];
+    this.jupiter = [age, expextedAge];
+  };
+  mercuryLogic() {
+    this.mercury /= 0.24;
+  }
+  venusLogic() {
+    this.venus /= 0.62
+  }
 };
 
 Age.prototype = function (ageInput, expectedAgeInput) {
