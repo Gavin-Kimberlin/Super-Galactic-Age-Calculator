@@ -3,13 +3,14 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Planets from './galactic-age.js'
-
+console.log('working');
 $(document).ready(function () {
+  console.log('working');
   $('.userInput').submit(function (event) {
-    const ageInput = $('#age');
-    const expectedAgeInput = $('#expectedAge');
+    event.preventDefault();
+    const ageInput = $('#age').val();
+    const expectedAgeInput = $('#expectedAge').val();
     let newPlanets = new Planets(ageInput, expectedAgeInput);
     console.log(newPlanets);
-    event.preventDefault();
   });
 });
